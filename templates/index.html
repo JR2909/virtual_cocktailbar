@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Cocktail-Seite{% endblock %}
+
+{% block content %}
+<main>
+  <article class="video-background">
+    <video id="videoPlayer" autoplay muted>
+      <source src="{{ url_for('static', filename='videos/3264304-hd_1280_720_30fps.mp4') }}" type="video/mp4">
+    </video>
+    <section class="welcome">
+      <h1>Welcome to the virtual <br> 🍹 Cocktailbar 🍸</h1>
+    </section>
+  </article>
+
+  <article class="container">
+    <h1>How can we inspire you tonight?</h1>
+
+    <section id="ingredients">
+      <h2>Ingredients</h2>
+      <p>Sprits, mixers, sweeteners, and bitters are essentials for cocktails.<br>
+        They give the drink a special note and a unique color - they make drinks exciting.<br>
+        If you already know an ingredient you want in your drink you can enter it here.
+      </p>
+      <form action="/search_ingredient" method="POST">
+        <input type="text" id="ingredient" name="query" required maxlength="30" placeholder="Vodka, Gin, Soda,...">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="drink_text">
+      <h2>Drinks</h2>
+      <p>They can be refreshing, bold, sweet, or sour-crafted to suit every taste and occasion.<br>
+        Whether shaken, stirred, or blended, cocktails bring creativity and fun to social gatherings,<br>
+        making every sip an experience. From classic favorites like the Mojito and Margarita<br>
+        to modern creations, there’s a perfect cocktail for everyone.<br>
+        If you already know your favorite drink, you can enter its name and get a recipe.
+      </p>
+      <form action="/search_drink" method="POST">
+        <input type="text" name="query" id="drink" required maxlength="30" placeholder="Negroni, Caipirinha, ...">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="random_drink">
+      <h2>You're curious and want to try something new?</h2>
+      <p>Text</p>
+      <form action="/random_drink" method="GET">
+        <button type="submit" id="random">Random Drink</button>
+      </form>
+    </section>
+  </article>
+</main>
+{% endblock %}
