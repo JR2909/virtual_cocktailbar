@@ -1,0 +1,160 @@
+body {
+    font-family: sans-serif;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555555;
+    padding-top: 70px;
+    color: white;
+}
+
+nav {
+    background-color: #1c1a1a;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(234, 250, 236);
+}
+
+.content {
+    padding: 20px;
+    width: 1500px;
+    height:200px;
+    margin-left: 10%;
+}
+
+.welcome{
+    text-align: center;
+    width: 1200px;
+    padding: 5px;
+    margin-top: 200px;
+    background-color: white;
+    color: black;
+    margin-left: 4%;
+    font-size:40px;
+    font-weight:bold;
+    opacity: 0.8;
+    mix-blend-mode: screen;
+}
+
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-background .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+#videoPlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0.4;
+    padding-top: 50px;
+}
+
+.container {
+    display: grid;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 100vh;
+}
+
+#welcome > h1 {
+    font-size: 4em;
+    color: #000000;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    z-index: 1;
+    background-color: #fffdfd;
+    opacity: 0.8;
+    padding: 25px;
+    mix-blend-mode: screen;
+}
+
+#question {
+    padding: 70px;
+    font-size: 25px;
+}
+
+#question > h1 {
+    font-size: 40px;
+} /* separate Formatierung für h1, damit h1 und Text trotz Vergrößerung unterscheidbar sind */
+
+input {
+    background-color: #555555;
+    border: 1px floralwhite solid;
+    color: white;
+}
+
+button {
+    background-color: #555555;
+    border: 1px floralwhite solid;
+    color: white;
+}
+
+button:hover {
+    background-color: #b5b5b5;
+}
+
+button:active {
+    background-color: #9e9c9c;
+}
