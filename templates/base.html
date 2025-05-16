@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Cocktailbar{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Startseite</a></li>
+      <li><a href="{{ url_for('top_drinks') }}">Top</a></li>
+      <li><a href="{{ url_for('impressum') }}">Impressum</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
