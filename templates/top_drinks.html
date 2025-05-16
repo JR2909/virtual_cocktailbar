@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Top 10 Cocktails{% endblock %}
+
+{% block content %}
+<h1>Top 10 most searched Cocktails </h1>
+
+{% if top_drinks %}
+<ul>
+    {% for drink in top_drinks %}
+    <li>
+        <h2>{{ drink.name }}</h2>
+        <img src="{{ drink.image }}" alt="{{ drink.name }}" width="100">
+        <p>{{ drink.searches }} time(s) searched</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No one has searched for drinks yet.</p>
+{% endif %}
+{% endblock %}
