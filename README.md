@@ -14,7 +14,7 @@
 
 ## static/styles.css
 
-# static/moon-icon.jpg
+## static/moon-icon.jpg
 The icon for activating the darkmode, referenced in templates/base.html
 
 ## static/videos/...
