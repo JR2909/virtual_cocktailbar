@@ -12,6 +12,7 @@
       <li><a href="{{ url_for('top_drinks') }}">Top Drinks</a></li>
       <li><a href="{{ url_for('impressum') }}">Impressum</a></li>
     </ul>
+    <img id="darkModeToggle" src="{{ url_for('static', filename='moon-icon.jpg') }}" alt="Dark Mode" class="dark-mode-icon">
   </nav>
   <div class="content">
     {% block content %}{% endblock %}
