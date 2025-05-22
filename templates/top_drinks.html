@@ -3,16 +3,16 @@
 {% block title %}Top 10 Cocktails{% endblock %}
 
 {% block content %}
-<h1 id="top_10_h1">Top 10 Most Searched Cocktails</h1>
+<h1 id="top_10_h1">Top 10 meist gesuchten Cocktails </h1>
 
 {% if top_drinks %}
 <table>
     <thead>
     <tr>
-        <th>Rank</th>
+        <th>Rang</th>
         <th>Cocktail Name</th>
-        <th>Image</th>
-        <th>Search Count</th>
+        <th>Bild</th>
+        <th>Anzahl an Suchen</th>
     </tr>
     </thead>
     <tbody>
@@ -27,6 +27,6 @@
     </tbody>
 </table>
 {% else %}
-<p>No drinks have been searched yet.</p>
+<p>Du bist der Erste der die virtuelle Cocktailbar gefunden hat. Seh dich doch um und such nach ein paar Drinks</p>
 {% endif %}
 {% endblock %}
