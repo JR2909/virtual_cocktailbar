@@ -1,3 +1,4 @@
+/* base.html*/
 body {
     font-family: sans-serif;
     width: auto;
@@ -27,8 +28,9 @@ body {
 }
 
 .dark-mode button, .dark-mode-icon {
-    filter: invert(1); /* Wandelt die Farbe in Hell um */
+    filter: invert(1);
 }
+
 nav {
     background-color: #1c1a1a;
     padding: 15px;
@@ -38,7 +40,7 @@ nav {
     left: 0;
     width: 100%;
     height: 70px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 10;
 
 }
@@ -66,13 +68,8 @@ nav ul li a {
     color: rgb(234, 250, 236);
 }
 
-.content {
-    padding: 20px;
-    width: 1500px;
-    height:200px;
-    margin-left: 10%;
-}
 
+/* index.html*/
 .welcome{
     text-align: center;
     width: 75%;
@@ -80,13 +77,12 @@ nav ul li a {
     margin-top: 200px;
     background-color: white;
     color: black;
-    margin-left: 4%;
+    margin-left: 90px;
     font-size:40px;
     font-weight:bold;
     opacity: 0.8;
     mix-blend-mode: screen;
 }
-
 
 .video-background {
     position: relative;
@@ -128,6 +124,18 @@ nav ul li a {
     margin-left: 20%;
     margin-right: 20%;
     height: 100vh;
+    text-align: center;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.box{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
 }
 
 #welcome > h1 {
@@ -177,3 +185,56 @@ button:hover {
 button:active {
     background-color: #9e9c9c;
 }
+
+
+/* top_drinks.html*/
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #aeaeae;
+}
+
+img {
+    border-radius: 10px;
+}
+
+
+.content {
+    padding: 20px;
+    width: 1500px;
+    height:200px;
+    margin-left: 10%;
+}
+
+#top_10_h1{
+    text-align: center;
+}
+
+
+/* kleinere Bildschirme*/
+@media screen and (max-width: 768px) {
+    .welcome{
+        position: relative;
+        top: 50%;
+        left: 20%;
+        right: 30%;}
+    .video-background {
+        position: relative;
+        width: 90%;
+        height: 100vh;
+        overflow: hidden;}}

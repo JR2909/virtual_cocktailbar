@@ -3,19 +3,30 @@
 {% block title %}Top 10 Cocktails{% endblock %}
 
 {% block content %}
-<h1>Top 10 most searched Cocktails </h1>
+<h1 id="top_10_h1">Top 10 Most Searched Cocktails</h1>
 
 {% if top_drinks %}
-<ul>
+<table>
+    <thead>
+    <tr>
+        <th>Rank</th>
+        <th>Cocktail Name</th>
+        <th>Image</th>
+        <th>Search Count</th>
+    </tr>
+    </thead>
+    <tbody>
     {% for drink in top_drinks %}
-    <li>
-        <h2>{{ drink.name }}</h2>
-        <img src="{{ drink.image }}" alt="{{ drink.name }}" width="100">
-        <p>{{ drink.searches }} time(s) searched</p>
-    </li>
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ drink.name }}</td>
+        <td><img src="{{ drink.image }}" alt="{{ drink.name }}" width="100"></td>
+        <td>{{ drink.searches }}</td>
+    </tr>
     {% endfor %}
-</ul>
+    </tbody>
+</table>
 {% else %}
-<p>No one has searched for drinks yet.</p>
+<p>No drinks have been searched yet.</p>
 {% endif %}
 {% endblock %}

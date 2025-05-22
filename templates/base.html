@@ -5,18 +5,18 @@
   <title>{% block title %}Cocktailbar{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="{{ url_for('index') }}">Home</a></li>
-      <li><a href="{{ url_for('top_drinks') }}">Top Drinks</a></li>
-      <li><a href="{{ url_for('impressum') }}">Impressum</a></li>
-    </ul>
-    <img id="darkModeToggle" src="{{ url_for('static', filename='moon-icon.jpg') }}" alt="Dark Mode" class="dark-mode-icon">
-  </nav>
-  <div class="content">
-    {% block content %}{% endblock %}
-  </div>
+<body class="{% if session.get('darkMode') == 'enabled' %}dark-mode{% endif %}">
+<nav>
+  <ul>
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('top_drinks') }}">Top Drinks</a></li>
+    <li><a href="{{ url_for('impressum') }}">Impressum</a></li>
+  </ul>
+  <img id="darkModeToggle" src="{{ url_for('static', filename='moon-icon.jpg') }}" alt="Dark Mode" class="dark-mode-icon">
+</nav>
+<div class="content">
+  {% block content %}{% endblock %}
+</div>
 <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
