@@ -6,15 +6,27 @@
 <h1>Results for Cocktails with "{{ ingredient }}"</h1>
 
 {% if drinks %}
-<ul>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Recipe</th>
+  </tr>
+  </thead>
+  <tbody>
   {% for drink in drinks %}
-  <li>
-    <h2>{{ drink['strDrink'] }}</h2>
-    <img src="{{ drink['strDrinkThumb'] }}" alt="{{ drink['strDrink'] }}" width="100">
-  </li>
+  <tr>
+    <td>{{ drink['strDrink'] }}</td>
+    <td><img src="{{ drink['strDrinkThumb'] }}" alt="{{ drink['strDrink'] }}" width="100"></td>
+    <td>
+      <a href="{{ url_for('search_drink', query=drink['strDrink']) }}">View Recipe</a>
+    </td>
+  </tr>
   {% endfor %}
-</ul>
+  </tbody>
+</table>
 {% else %}
-<p>No Cocktails found with "{{ ingredient }}".</p>
+<p>No cocktails found with "{{ ingredient }}".</p>
 {% endif %}
 {% endblock %}
