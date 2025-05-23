@@ -83,6 +83,13 @@ nav ul li a {
     opacity: 0.8;
     mix-blend-mode: screen;
 }
+.float_right{
+    float: right;
+}
+
+.box_image{
+    width: 250px;
+}
 
 .video-background {
     position: relative;
@@ -135,6 +142,7 @@ nav ul li a {
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
+    background-color: rgba(174, 168, 168, 0.8);
 }
 
 #welcome > h1 {
@@ -224,6 +232,11 @@ img {
     text-align: center;
 }
 
+/* 404.html*/
+.treasure-chest{
+    width: 200px;
+    float: left;
+}
 
 /* kleinere Bildschirme*/
 @media screen and (max-width: 768px) {

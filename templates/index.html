@@ -17,6 +17,9 @@
     <h1>How can we inspire you tonight?</h1>
 
     <section id="ingredients" class="box">
+      <div class="float_right">
+        <img src="{{ url_for('static', filename='ingredients.jpg') }}" width="250px" alt="Ingredients" class="box_image">
+      </div>
       <h2>Ingredients</h2>
       <p>Sprits, mixers, sweeteners, and bitters are essentials for cocktails.<br>
         They give the drink a special note and a unique color - they make drinks exciting.<br>
@@ -29,6 +32,9 @@
     </section>
 
     <section id="drink_text" class="box">
+      <div class="float_right">
+        <img src="{{ url_for('static', filename='drink.jpg') }}" width="250px" alt="Drink" class="box_image">
+      </div>
       <h2>Drinks</h2>
       <p>They can be refreshing, bold, sweet, or sour-crafted to suit every taste and occasion.<br>
         Whether shaken, stirred, or blended, cocktails bring creativity and fun to social gatherings,<br>
@@ -43,8 +49,12 @@
     </section>
 
     <section id="random_drink" class="box">
+      <div class="float_right">
+        <img src="{{ url_for('static', filename='random_drink.png') }}" width="250px" alt="Multiple Drinks" class="box_image">
+      </div>
       <h2>You're curious and want to try something new?</h2>
-      <p>You want to try something extraordinary? Something you've never seen before? Then try out a random drink of our selection - the bartenders choice for tonight </p>
+      <p>You want to try something extraordinary? Something you've never seen before? <br>
+        Then try out a random drink of our selection - the bartenders choice for tonight </p>
       <form action="/random_drink" method="GET">
         <button type="submit" id="random">Random Drink</button>
       </form>
