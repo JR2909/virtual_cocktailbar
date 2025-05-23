@@ -1,28 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %}"{{ drink_name }}"{% endblock %}
+{% block title %}Cocktail Results{% endblock %}
 
 {% block content %}
-
 <h1>Results for: "{{ drink_name }}"</h1>
 
 {% if drinks %}
-{% for drink in drinks %}
-<h2>{{ drink['strDrink'] }}</h2>
-<img src="{{ drink['strDrinkThumb'] }}" alt="{{ drink['strDrink'] }}" width="150">
-<h3>Ingredients:</h3>
-<ul>
-  {% for i in range(1, 16) %}
-  {% if drink["strIngredient" ~ i] %}
-  <li>{{ drink["strIngredient" ~ i] }} - {{ drink["strMeasure" ~ i] }}</li>
-  {% endif %}
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Ingredients</th>
+    <th>Instructions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for drink in drinks %}
+  <tr>
+    <td>{{ drink['strDrink'] }}</td>
+    <td><img src="{{ drink['strDrinkThumb'] }}" alt="{{ drink['strDrink'] }}" width="100"></td>
+    <td>
+      <ul>
+        {% for i in range(1, 16) %}
+        {% if drink["strIngredient" ~ i] %}
+        <li>{{ drink["strIngredient" ~ i] }} - {{ drink["strMeasure" ~ i] }}</li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </td>
+    <td>{{ drink['strInstructions'] }}</td>
+  </tr>
   {% endfor %}
-</ul>
-<h3>Instructions:</h3>
-<p>{{ drink['strInstructions'] }}</p>
-{% endfor %}
+  </tbody>
+</table>
 {% else %}
 <p>No Cocktails found with the name: "{{ drink_name }}".</p>
-
 {% endif %}
 {% endblock %}
