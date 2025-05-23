@@ -3,6 +3,7 @@
 {% block title %}"{{ drink_name }}"{% endblock %}
 
 {% block content %}
+
 <h1>Results for: "{{ drink_name }}"</h1>
 
 {% if drinks %}
@@ -22,5 +23,6 @@
 {% endfor %}
 {% else %}
 <p>No Cocktails found with the name: "{{ drink_name }}".</p>
+
 {% endif %}
 {% endblock %}
