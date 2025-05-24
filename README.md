@@ -1,23 +1,24 @@
 # Virtual Cocktailbar
 
 ## app.py
-Script, that works as the backbone of the website. 
+Script, that works as the backbone of the website.
+The script imports the packages requests, from the package flask the elements Flask, render_template, request and from the package flask-sqlalchemy the class SQLAlchemy. The scipt creates the object app, an instance of Flask and after a few configurations the object db, an instance of SQLAlchemy. Then the class Cocktail is defined, inheriting the features of db.model. After that the following functions are defined. If the script is run, a database is created and the app will run on 127.0.0.1:5000
+
 ### app.py/index
 Function that renders the page templates/index.html with the approute "/"
 
 ### app.py/search_ingredient
-Function, that searches for an ingredient in a cocktail via the api https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingredient}. The ingredient is received via the query with the id "ingredient" in index.html and forwarded to the template result_ingredient.html 
+Function, searches for an ingredient in a cocktail via the api https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingredient}. The ingredient is received via the query with the id "ingredient" in index.html and forwarded to the template result_ingredient.html with the approut "/search_ingredient"
 
 ### app.py/search_drink
 Function, that searches for a particular drink by its name, e.g. Moscow Mule or Negroni via the api https://www.thecocktaildb.com/api/json/v1/1/search.php?s={drink_name}. <br>
 After that the function will check, if the coctail exists in instance/cocktail.db
 
-
 ### app.py/random_drink
-
+The function sends a GET request at https://www.thecocktaildb.com/api/json/v1/1/random.php. The output will be returned as a json and forwareded to the teplates/result_random.html. The function has the approut "/random_drink"
 
 ### app.py/top_drinks
-
+The function will call the top 10 drinks from instance/cocktails.db and forward them to templates/top_drinks.html with the approute "/top"
 
 ### app.py/impressum
 Function that renders the page templates/impressum.html with the approute "/impressum"
@@ -39,6 +40,9 @@ Errorhandler for 404 Errors, renders 404.html
 
 ## templates/result_random.html
 
+## templates/404.html
+HTML-Page that works as errorhandler, shown when the error 404 occurs 
+
 ## static/scripts.js
 
 ## static/styles.css
@@ -46,8 +50,20 @@ Errorhandler for 404 Errors, renders 404.html
 ## static/moon-icon.jpg
 The icon for activating the darkmode, referenced in templates/base.html
 
+## static/treasure-chest.jpg
+The picutre shown in the page of the errorhandler, templates/404.html
+
+## static/ingredients.jpg
+Picture shown in the box ingredients, in templates/index.html, for entertainment purpose
+
+## static/drink.jpg
+Picture shown in the box drink, in templates/index.html, for entertainment purpose
+
+## static/random_drink.png
+Picture shown in the box random_drink, in templates/index.html, for entertainment purpose
+
 ## static/videos/...
-Contains the videos used for the video background in index.html. 
+Contains the videos used for the video background in templates/index.html. 
 
 ## instance/cocktails.db
 The database, created with flask-sqlalchemy and used to show the to searched cocktails. The database is referneced in templates/top_drinks.html
