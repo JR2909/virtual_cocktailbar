@@ -30,18 +30,25 @@ Function that renders the page templates/impressum.html with the approute "/impr
 Errorhandler for 404 Errors, renders 404.html
 
 ## templates/base.html
+This file contains the code for the navbar, including the navigation to the other files, templates/index.html as "Home", templates/top.html as Top Drinks and templates/impressum.html as Impressum. The Navbar also contains the icon for changing between light and darkmode, in the top left corner
 
 ## templates/index.html
+This file contains the homepage of the website, including a container with the videos from static/videos/.. as a background and the text "Welcome to the virtual 🍹 Cocktailbar 🍸". Below the container are three boxes, the first contains an input box, where an ingredient can be put and sent to the api, mentioned in app.py/search_ingredient. As a return you recive a list of cocktails with this specific ingredients on templates/result_ingredients.html. 
 
 ## templates/top_drinks.html
 
-## templates/impressum-html
+
+## templates/impressum.html
+This file contains the code for the ipressum with the nessecarry legal information for a website.
 
 ## templates/result_drink.html
+This file contains the code for a table that displays the results, recived in a json file from https://www.thecocktaildb.com/api/json/v1/1/search.php?s={drink_name}, as a table with the columns Name, Image, Ingredients and Instructions. 
 
 ## templates/result_ingredients.html
+This file contains, same as templates/result_drink.html, the code for a table to display the input, recived in a json file from https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingredient}, with the columns Name, Image, Recipe
 
 ## templates/result_random.html
+The file contains the code to display a random cocktail recived via https://www.thecocktaildb.com/api/json/v1/1/random.php.
 
 ## templates/404.html
 HTML-Page that works as errorhandler, shown when the error 404 occurs 
