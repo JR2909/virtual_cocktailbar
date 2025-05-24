@@ -1,5 +1,8 @@
 # Virtual Cocktailbar
 
+## requirements.txt
+Textfile, that shows the needed packages and their versions on the developed device. Other versions may be compatible to. 
+
 ## app.py
 Script, that works as the backbone of the website.
 The script imports the packages requests, from the package flask the elements Flask, render_template, request and from the package flask-sqlalchemy the class SQLAlchemy. The scipt creates the object app, an instance of Flask and after a few configurations the object db, an instance of SQLAlchemy. Then the class Cocktail is defined, inheriting the features of db.model. After that the following functions are defined. If the script is run, a database is created and the app will run on 127.0.0.1:5000
@@ -44,6 +47,10 @@ Errorhandler for 404 Errors, renders 404.html
 HTML-Page that works as errorhandler, shown when the error 404 occurs 
 
 ## static/scripts.js
+This File contains the scripts for the website. <br>
+The first function clears the inputfields after sending a request for an ingredient or a drink. <br>
+The second function contains the code to activate or deactivate the darkmode and stores the status of the darkmode, so it will be applied to all pages. 
+The thrid function renders and loops the seven videos in static/videos/.. for the background of the text "Welcome to the virtual 🍹 Cocktailbar 🍸" on templates/index.html
 
 ## static/styles.css
 
