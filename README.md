@@ -36,7 +36,7 @@ This file contains the code for the navbar, including the navigation to the othe
 This file contains the homepage of the website, including a container with the videos from static/videos/.. as a background and the text "Welcome to the virtual 🍹 Cocktailbar 🍸". Below the container are three boxes, the first contains an input box, where an ingredient can be put and sent to the api, mentioned in app.py/search_ingredient. As a return you recive a list of cocktails with this specific ingredients on templates/result_ingredients.html. 
 
 ## templates/top_drinks.html
-
+This files contains the code for the website with the approut "/top". It contains a list, with the top 10 drinks, searched via the function in "templates/app.py/search_drink" and saved in "instances/cocktail.db". The cocktails are displayed in a table, with the columns Rank, Cocktail Name, Image, Search Count. 
 
 ## templates/impressum.html
 This file contains the code for the ipressum with the nessecarry legal information for a website.
@@ -60,6 +60,7 @@ The second function contains the code to activate or deactivate the darkmode and
 The thrid function renders and loops the seven videos in static/videos/.. for the background of the text "Welcome to the virtual 🍹 Cocktailbar 🍸" on templates/index.html
 
 ## static/styles.css
+
 
 ## static/moon-icon.jpg
 The icon for activating the darkmode, referenced in templates/base.html
