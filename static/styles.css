@@ -1,5 +1,5 @@
 /* base.html*/
-body {
+body { /* styles for the entire body of the website, to ensure that it looks similar */
     font-family: sans-serif;
     width: auto;
     display: flex;
@@ -9,7 +9,7 @@ body {
     padding-top: 70px;
     color: #121111;
 }
-.dark-mode-icon {
+.dark-mode-icon { /* styles for the icon of the darkmode, in particular position, width and height */
     position: absolute;
     top: 10px;
     right: 50px;
@@ -18,20 +18,20 @@ body {
     cursor: pointer;
 }
 
-.dark-mode {
+.dark-mode { /* background and font color of the darkmode*/
     background-color: #222;
     color: white;
 }
 
-.dark-mode nav {
+.dark-mode nav { /* backgroundcolor of the navbar in the darkmode */
     background-color: #333;
 }
 
-.dark-mode button, .dark-mode-icon {
+.dark-mode button, .dark-mode-icon { /**/
     filter: invert(1);
 }
 
-nav {
+nav { /* styles for the navbar, in particular backgroundcolor, size and position */
     background-color: #1c1a1a;
     padding: 15px;
     text-align: center;
@@ -45,7 +45,7 @@ nav {
 
 }
 
-nav ul {
+nav ul { /* styles for the list used for the links in the navbar */
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -56,21 +56,27 @@ nav ul {
 
 }
 
-nav ul li {
+nav ul li { /* styles for the list elemets, like Home and Top*/
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
+nav ul li a { /* style of the links in the list, liked to the different pages */
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
     color: rgb(234, 250, 236);
 }
 
+.content { /* special specifications for the content of the website */ 
+    padding: 20px;
+    width: 1500px;
+    height:200px;
+    margin-left: 10%;
+}
 
 /* index.html*/
-.welcome{
+.welcome{ /* specifications for the text on the homepage */
     text-align: center;
     width: 75%;
     padding: 5px;
@@ -83,15 +89,8 @@ nav ul li a {
     opacity: 0.8;
     mix-blend-mode: screen;
 }
-.float_right{
-    float: right;
-}
 
-.box_image{
-    width: 250px;
-}
-
-.video-background {
+.video-background { /* specifications for the video in the background*/
     position: relative;
     width: 100%;
     height: 100vh;
@@ -99,26 +98,26 @@ nav ul li a {
 
 }
 
-.video-background video {
+.video-background video { /* specifications for the video in the background */
     position: absolute;
     top: 50%;
     left: 25%;
     right: 25%;
-    transform: translate(-50%, -50%);
+    transform: translate(-45%, -50%);
     width: 100vw;
     height: auto;
     object-fit: cover;
     z-index: -1;
 }
 
-.video-background .content {
+.video-background .content {/* specifications for the mentioned classes*/
     position: relative;
     z-index: 1;
     text-align: center;
     padding: 50px;
 }
 
-#videoPlayer {
+#videoPlayer {/* specifications for the videoplayer */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,31 +125,31 @@ nav ul li a {
     padding-top: 50px;
 }
 
-.container {
+.container {/**/
     display: grid;
     margin-left: 20%;
-    margin-right: 20%;
+    margin-right: 30%;
     height: 100vh;
+    text-align: left;
 }
 
-.container h1{
+.container h1{/* headline centered, while text left */
     text-align: center;
 }
 
-.box{
+.box{/* specifications of the textboxes with images and text for the userinput, stylistic purposes */
     border: 1px solid black;
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
-    background-color: rgba(174, 168, 168, 0.8);
 }
 
-#welcome > h1 {
+#welcome > h1 {/**/
     font-size: 4em;
     color: #000000;
 }
 
-.overlay {
+.overlay {/* specifications for the overlay, over the backgroundvideo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,88 +163,66 @@ nav ul li a {
     mix-blend-mode: screen;
 }
 
-#question {
-    padding: 70px;
-    font-size: 25px;
-}
-
-#question > h1 {
-    font-size: 40px;
-} /* separate Formatierung für h1, damit h1 und Text trotz Vergrößerung unterscheidbar sind */
-
-input {
+input { /* specifications of the input fields*/
     background-color: floralwhite;
     border: 1px black solid;
     color: darkgray;
 }
 
-button {
+button { /*specifications of the button*/
     background-color: #2e2e2b;
     border: 1px black solid;
     color: white;
 }
 
-button:hover {
+button:hover { /* background of the button, while hovering over it*/
     background-color: #b5b5b5;
 }
 
-button:active {
+button:active { /* background of the button, while active */
     background-color: #9e9c9c;
 }
 
 
 /* top_drinks.html*/
-table {
+table { /* specifications for the table for the list, of top drinks, like the text-align and the width */
     width: 80%;
     border-collapse: collapse;
     margin: 20px auto;
     text-align: center;
 }
 
-th, td {
+th, td { /* specifications for the table */
     padding: 10px;
     border: 1px solid #ddd;
 }
 
-th {
+th { /* specifications for the table  */
     background-color: #333;
     color: white;
 }
 
-tr:nth-child(even) {
+tr:nth-child(even) { /* every even column of the table has a different backgroundcolor, for stylistic purposes n*/
     background-color: #aeaeae;
 }
 
-img {
+img { /* rounded edges of the images, for stylistic purposes */
     border-radius: 10px;
 }
 
-
-.content {
-    padding: 20px;
-    width: 1500px;
-    height:200px;
-    margin-left: 10%;
-}
-
-#top_10_h1{
+#top_10_h1{ /* central align, of h1 on top_drinks, for stylistic purposes */
     text-align: center;
 }
 
-/* 404.html*/
-.treasure-chest{
-    width: 200px;
-    float: left;
-}
 
 /* kleinere Bildschirme*/
 @media screen and (max-width: 768px) {
-    .welcome{
+    .welcome{ /* middle position of the container with the welcome text*/
         position: relative;
         top: 50%;
         left: 20%;
         right: 30%;}
-    .video-background {
+    .video-background { /* similar positioning of the videobackground of the welcome text*/
         position: relative;
         width: 90%;
         height: 100vh;
