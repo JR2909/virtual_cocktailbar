@@ -60,7 +60,7 @@ The second function contains the code to activate or deactivate the darkmode and
 The thrid function renders and loops the seven videos in static/videos/.. for the background of the text "Welcome to the virtual 🍹 Cocktailbar 🍸" on templates/index.html
 
 ## static/styles.css
-
+contains the styles for the entier webapplication, commented seperatly in the file. 
 
 ## static/moon-icon.jpg
 The icon for activating the darkmode, referenced in templates/base.html
