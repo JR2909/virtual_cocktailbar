@@ -183,7 +183,9 @@ button:hover { /* background of the button, while hovering over it*/
 button:active { /* background of the button, while active */
     background-color: #9e9c9c;
 }
-
+.float_right{ /* images in boxes float right */
+    float: right;
+}
 
 /* top_drinks.html*/
 table { /* specifications for the table for the list, of top drinks, like the text-align and the width */
