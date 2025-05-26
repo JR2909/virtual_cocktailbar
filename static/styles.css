@@ -142,6 +142,7 @@ nav ul li a { /* style of the links in the list, liked to the different pages */
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
+    background-color:#c9c7c7;
 }
 
 #welcome > h1 {/**/
