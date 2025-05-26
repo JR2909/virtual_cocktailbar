@@ -19,7 +19,7 @@ def index():
     return render_template('index.html')
 #approute for homepage
 
-@app.route('/search_ingredient', methods=['POST'])
+@app.route('/search_ingredient', methods=['POST']) # should be GET-Method, but returns an error, so POST Method used
 def search_ingredient():
     ingredient = request.form.get('query')
     url = f"https://www.thecocktaildb.com/api/json/v1/1/filter.php?i={ingredient}"
@@ -30,7 +30,7 @@ def search_ingredient():
     return render_template('result_ingredient.html', ingredient=ingredient, drinks=drinks)
 # search function for ingredients via api
 
-@app.route('/search_drink', methods=['POST'])
+@app.route('/search_drink', methods=['POST']) # should be GET-Method, but returns an error, so POST Method used
 def search_drink():
     drink_name = request.form.get('query')
     url = f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={drink_name}"
