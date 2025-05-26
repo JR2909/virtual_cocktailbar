@@ -125,7 +125,7 @@ nav ul li a { /* style of the links in the list, liked to the different pages */
     padding-top: 50px;
 }
 
-.container {/**/
+.container {/* content of the page index.html */
     display: grid;
     margin-left: 20%;
     margin-right: 30%;
@@ -145,7 +145,7 @@ nav ul li a { /* style of the links in the list, liked to the different pages */
     background-color:#c9c7c7;
 }
 
-#welcome > h1 {/**/
+#welcome > h1 {/* Text: "Welcome to the virtual Cocktailbar */
     font-size: 4em;
     color: #000000;
 }
